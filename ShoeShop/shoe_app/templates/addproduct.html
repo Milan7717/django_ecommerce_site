@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!------- tailwind cdn----- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+
+    <title>ShoeShop</title>
+
+
+</head>
+
+<body class="bg-black text-white">
+
+
+
+    <!------------ navbar ------------->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <div class="container-fluid flex flex-wrap items-center justify-between mx-auto">
+            <a href="/" class="flex items-center">
+
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60
+        " class="h-10 rounded-lg sm:h-12 md:ml-4" alt="Flowbite Logo" />
+
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-xl  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-gray-700  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="./category"
+                            class="block py-2 pl-3 pr-4  sm:text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Categories</a>
+                    </li>
+                    <li>
+                        <a href="./kids"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kids</a>
+                    </li>
+
+                    <li>
+                        <a href="./mens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mens</a>
+                    </li>
+                    <li>
+                        <a href="./womens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Womens</a>
+                    </li>
+                    <li>
+                        <a href="./contact"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                    <li>
+                        <a href="./addproduct"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Add Product</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div>
+        <div class=" text-center flex justify-center">
+            <form action="#" class=" w-[90%] md:w-[60%] sm:w-[70%]  text-lg">
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2">Shop Name </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="text" placeholder="Provide your shop name.">
+                </div>
+
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Phone </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="number">
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Brand </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="text">
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Price </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="text">
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Color </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="text" placeholder="Available color">
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Size </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="text" placeholder="Available Size">
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Quantity </p>
+                    <input class="p-2 md:w-[80%] w-[70%] border-0 outline-none overflow-hidden bg-transparent" type="number">
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Add Image </p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none overflow-hidden bg-transparent" type="file" accept=".png,.jpeg" placeholder="Available Size">
+                </div>
+               
+
+                <button class="bg-blue-500 hover:bg-blue-700 rounded-lg p-2 text-lg">Submit</button>
+               
+
+
+            </form>
+           
+        </div>
+    </div>
+
+
+
+
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+
+</html>

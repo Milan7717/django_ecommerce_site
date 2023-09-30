@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!------- tailwind cdn----- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+
+    <title>ShoeShop</title>
+
+
+</head>
+
+<body>
+
+
+
+    <!------------ navbar ------------->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <div class="container-fluid flex flex-wrap items-center justify-between mx-auto">
+            <a href="/" class="flex items-center">
+
+                <img src="../static/img/1000_F_332468117_1LWZWe1XjTbedkSOAjD7H672i04a.jpg"
+                    class="h-10 rounded-lg sm:h-12 md:ml-4" alt="Flowbite Logo" />
+
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-lg  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-gray-700  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="./categories"
+                            class="block py-2 pl-3 pr-4   rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Categories</a>
+                    </li>
+                    {% comment %} <li>
+                        <a href="./kids"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kids</a>
+                    </li>
+
+                    <li>
+                        <a href="./mens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mens</a>
+                    </li>
+                    <li>
+                        <a href="./womens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Womens</a>
+                    </li> {% endcomment %}
+                    <!-- <li>
+                        <a href="./contact"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="./addproduct"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Add
+                            Product</a>
+                    </li> -->
+                    <div> <a href="./login"><button
+                                class="  text-white  bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2 text-center md:mr-2 my-2 sm:my-0 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Log In</button></a>
+                    </div>
+                    <div>
+                        <a href="./signup"><button
+                                class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2 text-center md:mr-2 my-2 sm:my-0 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Sign Up</button></a>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="mb-8">
+        <h1 class="text-4xl my-10 text-center text-yellow-500 font-semibold">Categories of <Span
+                class="text-blue-800">Shoes</Span></h1>
+        <div class="sm:mx-8 mx-2 grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <a href="./product/3"><div class="rounded-xl border-1 border-slate-400  bg-gray-100 shadow-2xl shadow-black-500/50">
+                
+                <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4 cursor-pointer "
+                    data-modal-target="Kids-shoes" data-modal-toggle="Kids-shoes">
+
+                    <img src="https://www.maayus.com/wp-content/uploads/2023/08/Picachu-print-Blue-Sneaker-small.jpg.webp"
+                        alt="" class="h-[400px] w-[100%] object-cover  object-center">
+
+                </div>
+                <div class="text-center text-4xl my-4 font-semibold">Kids</div>
+                <p class="p-1 my-1">In our Kids' Shoes Wonderland blog, we invite you to dive into a world where
+                    footwear becomes an
+                    exciting part of a child's journey. Whether you're a parent searching for the perfect pair, a
+                    grandparent looking to spoil your little ones, or a kid with an eye for style, this is your ultimate
+                    destination for all things kid-friendly and footwear-fantastic.</p>
+
+
+            </div></a>
+
+            <a href="./product/2"><div class="rounded-xl border-1 border-slate-400  bg-gray-100 shadow-2xl shadow-black-500/50">
+               
+                <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4 cursor-pointer "
+                    data-modal-target="Kids-shoes" data-modal-toggle="Kids-shoes">
+
+                    <img src="../static/img/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt=""
+                        class="h-[400px] w-[100%] object-cover  object-center">
+
+                </div>
+                <div class="text-center text-4xl my-4 font-semibold">Womens</div>
+                <p class="p-1 my-1">Our Women's, Men's, and Kids' Shoes Wonderland blog is your ultimate destination for
+                    a diverse range of footwear. Whether you're a mom searching for the perfect pair of shoes for
+                    yourself, your husband, and your little ones, a grandmother looking to spoil your family, or someone
+                    with a penchant for fashionable footwear, we have something for everyone.</p>
+
+
+            </div></a>
+
+            <a href="./product/1"><div class="rounded-xl border-1 border-slate-400  bg-gray-100 shadow-2xl shadow-black-500/50">
+                
+                <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4 cursor-pointer "
+                    data-modal-target="Kids-shoes" data-modal-toggle="Kids-shoes">
+
+                    <img src="../static/img/usama-akram-kP6knT7tjn4-unsplash.jpg" alt=""
+                        class="h-[400px] w-[100%] object-cover  object-center">
+
+                </div>
+                <div class="text-center text-4xl my-4 font-semibold">Mens</div>
+                <p class="p-1 my-1">Our Men's and Kids' Shoes Wonderland blog is your go-to destination for footwear
+                    that caters to all ages. Whether you're a dad seeking quality shoes for yourself and your little
+                    ones, a grandparent looking to outfit the whole family, or a young explorer with a discerning taste
+                    in shoes, we've got you covered.</p>
+
+
+            </div></a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+
+</html>

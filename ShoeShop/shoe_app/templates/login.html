@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!------- tailwind cdn----- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+
+    <title>ShoeShop</title>
+
+
+</head>
+
+<body class="bg-black text-white">
+
+
+
+    <!------------ navbar ------------->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <div class="container-fluid flex flex-wrap items-center justify-between mx-auto">
+            <a href="/" class="flex items-center">
+
+                <img src="../static/img/1000_F_332468117_1LWZWe1XjTbedkSOAjD7H672i04a.jpg" class="h-10 rounded-lg sm:h-12 md:ml-4" alt="Flowbite Logo" />
+
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-lg  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-gray-700  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="./categories"
+                            class="block py-2 pl-3 pr-4   rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Categories</a>
+                    </li>
+                    {% comment %} <li>
+                        <a href="./kids"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kids</a>
+                    </li>
+
+                    <li>
+                        <a href="./mens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mens</a>
+                    </li>
+                    <li>
+                        <a href="./womens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Womens</a>
+                    </li> {% endcomment %}
+                    <!-- <li>
+                        <a href="./contact"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="./addproduct"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Add
+                            Product</a>
+                    </li> -->
+                    <div> <a href="./login"><button
+                        class="  text-white  bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2 text-center md:mr-2 my-2 sm:my-0 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Log In</button></a>
+                        </div>
+                        <div>
+                <a href="./signup"><button
+                    class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2 text-center md:mr-2 my-2 sm:my-0 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Sign Up</button></a>
+                </div>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact text-center">
+        <h1 class=" text-4xl my-8">Welcome to <span class="text-blue-400">ShoeShop</span></h1>
+        <div class="flex justify-center items-center">
+            <form action="/login" method="POST" class="md:w-[60%] sm:w-[80%] w-[90%] lg:w-[50%] text-lg border-2 border-gray-600 md:p-4 p-2 rounded-lg">
+                {% csrf_token %}
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Email :</p>
+                    <input class="p-2 md:w-[80%] w-[70%] outline-none bg-transparent" type="email" name="email" id="email"
+                     {% comment %} value="{{email}}"  {% endcomment %}
+                     placeholder="Your Email"
+                        required>
+                </div>
+                <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                    <p class="md:w-[20%] w-[30%] p-2 ">Password :</p>
+                    <input class="p-2 md:w-[80%]  w-[70%] outline-none bg-transparent" type="password" name="password"  id="password"value="{{password}}" placeholder="Password"
+                        required>
+                </div>
+
+                <div class="text-white mb-4">
+                    <a href=""><button type="submit"
+                        class="btn bg-blue-400 p-1 border-2 border-sky-400 text-lg sm:text-xl rounded-lg sm:p-2 w-[8rem]">Log
+                        In</button></a>
+                </div>
+                <div class="flex justify-end items-center " >
+                    <a href="">
+                        <p class="bg-red-500 p-2 rounded-lg">Forget Password</p>
+                    </a>
+                </div>
+                <div class="flex justify-between my-6 items-center" >
+                    <p>Doesnot have an account?</p>
+                    <a href="./signup"><p class="bg-red-500 p-2 rounded-lg">Sign Up</p></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+{% comment %} 
+    <footer class="p-2  bg-white shadow md:flex md:items-center md:justify-between md:p-2 dark:bg-gray-800 fixed bottom-0 w-full ">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex items-center  "> <a href="/"><img
+                    src="../static/img/1000_F_332468117_1LWZWe1XjTbedkSOAjD7H672i04a.jpg" alt=""
+                    class="h-6 rounded-lg sm:h-8 md:ml-4"></a> <p>©
+            2023 All
+            Rights Reserved.</p>
+        </span>
+        <div class=" flex flex-wrap items-center">
+            <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                </li>
+                
+            </ul>
+            <a href="./login"><button
+                    class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center md:mr-2 mx-2 sm:mx-6 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Log In</button></a>
+            <a href="./signup"><button
+                class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center md:mr-2 mx-2 sm:mx-6 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Sign Up</button></a>
+        </div>
+    </footer> {% endcomment %}
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+
+</html>

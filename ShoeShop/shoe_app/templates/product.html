@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------- tailwind cdn----- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>ShoeShop</title>
+
+</head>
+
+<body class="text-white bg-black">
+
+    <!------------ navbar ------------->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <div class="container-fluid flex flex-wrap items-center justify-between mx-auto">
+            <a href="/" class="flex items-center">
+
+                <img src="../static/img/1000_F_332468117_1LWZWe1XjTbedkSOAjD7H672i04a.jpg"
+                    class="h-10 rounded-lg sm:h-12 md:ml-4" alt="Flowbite Logo" />
+
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-lg  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-gray-700  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../categories"
+                            class="block py-2 pl-3 pr-4   rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Categories</a>
+                    </li>
+                    {% comment %} <li>
+                        <a href="./kids"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kids</a>
+                    </li>
+
+                    <li>
+                        <a href="./mens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mens</a>
+                    </li>
+                    <li>
+                        <a href="./womens"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Womens</a>
+                    </li> {% endcomment %}
+                    <!-- <li>
+                        <a href="./contact"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="./addproduct"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Add
+                            Product</a>
+                    </li> -->
+                    <div> <a href="../../login"><button
+                                class="  text-white  bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2 text-center md:mr-2 my-2 sm:my-0 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Log In</button></a>
+                    </div>
+                    <div>
+                        <a href="../../signup"><button
+                                class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2 text-center md:mr-2 my-2 sm:my-0 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Sign Up</button></a>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {% for product in products %}
+
+    <div class="sm:mx-8 sm:my-8 mx-4 my-4">
+        <div class="sm:mx-8 mx-2 grid  sm:grid-cols-3 grid-cols-1   gap-4">
+            <div class="">
+                <img src="
+                                {{product.image.url}}" alt=""
+                    class=" sm:h-[450px] h-[350px] md:h-[550px] w-[100%] object-cover  object-center rounded-lg">
+            </div>
+            
+
+{% comment %}             
+            <div class="flex justify-center">
+
+                <!------------- modal ------------>
+                <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4 cursor-pointer "
+                    data-modal-target="shoes-blog" data-modal-toggle="shoes-blog">
+
+                    <img src="{{product.image.url}}" alt=""
+                        class=" sm:h-[350px] h-[250px] md:h-[400px]  w-[100%] sm:w-[100%] object-cover  object-center rounded-lg">
+
+                </div>
+                <div id="shoes-blog" tabindex="-1"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+                    <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+
+                        <!-- Modal content -->
+                        <div class="relative  rounded-lg shadow ">
+                            <div class=" flex justify-end mb-1 ">
+                                <button data-modal-hide="shoes-blog" type="button"
+                                    class=" focus:outline-none    text-center "><i
+                                        class="fa-regular fa-circle-xmark fa-2x"></i></button>
+                            </div>
+                            <div class="">
+                                <img src="
+                                {{product.image.url}}" alt=""
+                                    class=" sm:h-[450px] h-[350px] md:h-[550px] w-[100%] object-cover  object-center rounded-lg">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> {% endcomment %}
+
+
+            <div class="col-span-2 text-center">
+                <form action="#" class=" w-[100%] md:w-[90%] sm:w-[95%] text-lg">
+
+                    <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                        <p class="md:w-[20%] w-[30%] p-2">Brand </p>
+                        <input class="p-2 md:w-[80%] w-[70%] border-0 outline-none overflow-hidden bg-transparent"
+                            readonly type="text" value={{product.brand}}>
+                    </div>
+                    <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                        <p class="md:w-[20%] w-[30%] p-2 ">Price </p>
+                        <input class="p-2 md:w-[80%] w-[70%] border-0 outline-none overflow-hidden bg-transparent"
+                            readonly type="text" value={{product.price}}>
+                    </div>
+                    <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                        <p class="md:w-[20%] w-[30%] p-2 ">color </p>
+                        <input class="p-2 md:w-[80%] w-[70%] border-0 outline-none overflow-hidden bg-transparent"
+                            readonly type="text" value={{product.color}}>
+                    </div>
+                    <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                        <p class="md:w-[20%] w-[30%] p-2 ">size </p>
+                        <input class="p-2 md:w-[80%] w-[70%] border-0 outline-none overflow-hidden bg-transparent"
+                            readonly type="text" value={{product.size}}>
+                    </div>
+                    <div class="flex items-center  mb-4 border-2 border-sky-400  rounded-lg">
+                        <p class="md:w-[20%] w-[30%] p-2 ">Quantity </p>
+                        <input class="p-2 md:w-[80%] w-[70%] border-0 outline-none overflow-hidden bg-transparent"
+                            type="number" id="quantity">
+                    </div>
+
+
+                </form>
+                <div class="text-lg text-white text-center">
+                    <a href="">
+                        <div
+                            class="bg-orange-500 hover:bg-orange-700 p-1 flex w-[70%] justify-between rounded-lg my-2 md:my-4">
+                            <div class="text-center w-[100%]">
+                                <p>Buy Now</p>
+                            </div>
+                            <div> <i class="fa-solid fa-shoe-prints fa-fade"></i>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="../../cart/{{product.id}}/{{person}}/">
+                        <div
+                            class="bg-blue-500 hover:bg-blue-700 p-1 flex w-[70%] justify-between rounded-lg my-2 md:my-4">
+                            <div class="text-center w-[100%]">
+                                <p>Add to cart</p>
+                            </div>
+                            <div> <i class="fa-solid fa-cart-shopping fa-shake"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    {% endfor %}
+
+
+    {% comment %} <footer
+        class="p-2  bg-white shadow md:flex md:items-center md:justify-between md:p-2 dark:bg-gray-800 fixed bottom-0 w-full ">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex items-center  "> <a href="/"><img
+                    src="../static/img/1000_F_332468117_1LWZWe1XjTbedkSOAjD7H672i04a.jpg" alt=""
+                    class="h-6 rounded-lg sm:h-8 md:ml-4"></a>
+            <p>©
+                2023 All
+                Rights Reserved.</p>
+        </span>
+        <div class=" flex flex-wrap items-center">
+            <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                </li>
+
+            </ul>
+            <a href="./login"><button
+                    class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center md:mr-2 mx-2 sm:mx-6 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Log In</button></a>
+            <a href="./signup"><button
+                    class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center md:mr-2 mx-2 sm:mx-6 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Sign Up</button></a>
+        </div>
+    </footer> {% endcomment %}
+
+    <!-- tailwind cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+
+</html>
