@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 
-from shoe_app.models import People,Product,Cart
+from shoe_app.models import People,Product
+from .models import Cart
 # from .models import Category
 # Create your views here.
 def home(request):
@@ -115,31 +116,28 @@ def signup(request):
     
     return render (request,'signup.html')
 
-def cart(request, slug):
-    add_cart=Cart.objects.all()
-    if Product.objects.all(slug=slug).exists():
-        if Cart.objects.filter(slug=slug,checkout=False).exists():
-            quantity = Cart.objects.get(slug=slug,checkout=False).quantity
-            price = Product.objects.get(slug=slug).price
+
+
+def cart(request,product_id,person_id):
+    
+    try:
+        product = Product.objects.get(pk=product_id)
+        person = People.objects.get(pk=person_id)
+        
+        Cart.objects.create(
             
-            quantity = quantity + 1
+            product_id=product,
             
-            total = price* quantity
-
-            data = Cart.objects.create(
-                
-                slug = slug,
-                total = total,
-                quantity = 1,
-                items = Product.objects.get(slug=slug)
-
-             )
-            data.save()
-
-    else:
-        return redirect('/')
-
-    return redirect('/cart',{'add_cart':add_cart})
+            person_id =person  # You can adjust this as needed
+        )
+        messages.success(request,"Added to cart")
+    except Exception as e:
+        print(e)
+        messages.error(request,"Couldnot add to cart")
+        print("Adding failed")
+    
+    return render(request, 'cart.html')
+    
 
 # def addproduct(request):
 #     return render (request,'addproduct.html')

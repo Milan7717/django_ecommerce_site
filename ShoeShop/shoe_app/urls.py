@@ -13,7 +13,7 @@ urlpatterns = [
    path('product/<int:id>/',views.product,name='product'),
    path('login',views.login,name='login'),
    path('signup',views.signup,name='signup'),
-   path('cart',views.cart,name='cart'),
+   path('cart/<int:product_id>/<int:person_id>',views.cart,name='cart'),
    # path('addproduct',views.addproduct),
 
 ]

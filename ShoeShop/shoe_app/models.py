@@ -43,21 +43,19 @@ class Product(models.Model):
     price=models.IntegerField(null=False)
     color=models.CharField(max_length=10)
     size=models.IntegerField(null=True)
-    quantity=models.IntegerField(null=True)
+    quantity=models.IntegerField(null=False,default=1)
     image=models.ImageField(null=True,upload_to='media')
     catogory  = models.ForeignKey(Category,on_delete=models.SET_NULL,null=True)
     
     def __str__(self):
         return  self.brand
     
+
+  
+
 class Cart(models.Model):
-    
-    slug = models.CharField(max_length=300)
-    quantity = models.IntegerField(null=True)
-    total = models.IntegerField(null=True)
-    
-    items = models.ForeignKey(Product,on_delete=models.CASCADE)
+    product_id = models.ForeignKey(Product, on_delete=models.SET_NULL,null=True)
+    person_id = models.ForeignKey(People, on_delete=models.SET_NULL,null=True)
 
     def __str__(self):
-        return self.quantity
-    
+        return  self.product_id
